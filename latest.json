@@ -1,8 +1,8 @@
 {
-  "version": "1.7.0",
-  "publishedAt": "2026-11-08T14:10:54Z",
-  "notes": "## V1.7.0 更新内容\n\n- 新增手机文字聊天。回复显示完整文字，并按现有音色和播报设置朗读。\n- 桌宠名、用户姓名和称呼独立保存。可以直接在对话中改名，在设置中管理长期记忆及 AI 摘要。\n- 设置归为四类，新增豆包（火山方舟），保留 DeepSeek、千问和自定义兼容服务。\n- Windows Helper 通过蓝牙经典版 RFCOMM 只读同步 Codex 任务、额度和可观测 Token。系统配对后，首次连接需要在手机上单独授权。\n- 更新检查优先读取静态清单，支持缓存、限流提示和备用查询。APK 下载继续支持断点续传和签名校验。\n\n## 安装与使用\n\n- **Android**：下载并打开 `PocketPet-v1.7.0.apk`。V1.6.5 正式版可直接覆盖安装，也可从「设置 → 检查更新」升级。右下角气泡打开文字聊天。\n- **Windows x64**：先在系统蓝牙设置配对电脑和手机，再双击 `PocketPet-Helper-v1.7.0-win-x64.exe`。电脑需要已登录的 Codex CLI。手机打开「设置 → Codex 联动」，启用蓝牙联动并点「允许新电脑配对」，再核对托盘助手显示的数字并确认授权。\n- 下载文件可用附带的 `SHA256SUMS.txt` 校验。Windows Helper 附有内置 Node.js 运行时的许可证。\n\n## 验证范围\n\nAndroid Release 构建、单测和 Lint 通过。Android 35 模拟器已从 V1.6.5 用同一正式证书覆盖安装 V1.7.0，确认旧设置、身份、长期记忆与加密配置可读，文字播报冒烟测试通过。Windows Helper 已通过 x64 构建、凭据往返和本机蓝牙设备枚举。\n\n实体设备之间的蓝牙联动、真实扬声器上的文字 TTS 和实际升级体验待安装后验证。\r\n",
-  "apkUrl": "https://github.com/STHONEONE/PocketPet-Releases/releases/download/v1.7.0/PocketPet-v1.7.0.apk",
-  "size": 157071985,
-  "sha256": "9aea816677c5eb67355b23eedd96d12fcc8b376c4ea2075f2c1d5163743d6394"
+  "version": "1.8.1",
+  "publishedAt": "2026-11-13T14:19:35Z",
+  "notes": "## PocketPet V1.8.1\n\n- 新增局域网或手机热点加密联动，Windows Helper 同步 Codex 额度、任务状态与可观测动作类别。\n- 最多观察四个 Codex 会话，优先显示执行中、等待关注的会话；主界面额度圆环旁的任务图标可展开简洁任务面板。\n- 支持语音查询 Codex 工作状态，并按设置提醒任务完成、失败或等待人工关注。Codex 联动保持只读。\n- 保留现有文字与语音对话、表情、长期记忆、设置及加密凭据。\n- 修复发布仓库迁移后的更新地址；V1.8.1 下载器直接使用 JmCake/PocketPet-Releases，并兼容旧版静态清单。\n\n### 安装与升级\n\nAndroid 下载 `PocketPet-v1.8.1.apk` 后直接覆盖安装，勿卸载旧版。应用 ID 为 `com.pocketpet.app`，versionName 为 `1.8.1`，versionCode 为 `183`；与 V1.7.0（170）及 V1.8.0（180/182）使用同一正式证书，版本递增。\n\n**仓库迁移说明：** V1.7.0/V1.8.0 原有「检查更新」可通过兼容清单发现 V1.8.1，但旧下载器会拒绝 GitHub 的仓库迁移跳转。本次请从本 Release 下载 APK，直接覆盖安装以保留应用数据。V1.8.1 已修复后续更新地址。清单中的原仓库 APK 地址是为旧客户端保留的兼容别名，浏览器会跳转至本仓库的同一正式资产。\n\nWindows x64 下载 `PocketPet-Helper-v1.8.1-win-x64.exe` 后运行。电脑需安装并登录 Codex CLI；手机与电脑接入可互访的同一 Wi-Fi 或手机热点。在 Helper 中复制连接信息，再粘贴到手机「设置 → Codex 联动」。内置 Node.js 运行时的许可另附。EXE 已通过打包自检和 SHA-256 校验，未作 Authenticode 签名。\n\n### 验证范围\n\nAndroid Release 构建、单测、Lint、APK v2/v3 正式签名及两个产物的 SHA-256 验证通过；Windows Helper 的 worker 和独立 EXE 自检通过。核对 V1.7.0/V1.8.0 的包名、版本递增、同证书，以及沿用的 Room 迁移、DataStore 和 Keystore 存储；相关数据层沿用已通过模拟器覆盖升级验收的 V1.8.0 实现。本次未新增真机覆盖升级、真实 AI 服务或实体局域网联动验收。\n\n下载后可使用 `SHA256SUMS.txt` 校验文件完整性。\n",
+  "apkUrl": "https://github.com/STHONEONE/PocketPet-Releases/releases/download/v1.8.1/PocketPet-v1.8.1.apk",
+  "size": 157129329,
+  "sha256": "24cbf8eea03e127d11f63e56bcfaaea5824ea287837167327d5bfaffc35d8fc2"
 }
